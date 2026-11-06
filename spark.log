@@ -1,0 +1,810 @@
+:: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+org.apache.iceberg#iceberg-spark-runtime-3.5_2.12 added as a dependency
+org.apache.iceberg#iceberg-aws-bundle added as a dependency
+org.apache.hadoop#hadoop-aws added as a dependency
+com.amazonaws#aws-java-sdk-bundle added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-cd42f624-9545-4760-b476-7022651fc466;1.0
+	confs: [default]
+	found org.apache.iceberg#iceberg-spark-runtime-3.5_2.12;1.7.1 in central
+	found org.apache.iceberg#iceberg-aws-bundle;1.7.1 in central
+	found org.apache.hadoop#hadoop-aws;3.3.4 in central
+	found com.amazonaws#aws-java-sdk-bundle;1.12.262 in central
+	found org.wildfly.openssl#wildfly-openssl;1.0.7.Final in central
+:: resolution report :: resolve 97ms :: artifacts dl 4ms
+	:: modules in use:
+	com.amazonaws#aws-java-sdk-bundle;1.12.262 from central in [default]
+	org.apache.hadoop#hadoop-aws;3.3.4 from central in [default]
+	org.apache.iceberg#iceberg-aws-bundle;1.7.1 from central in [default]
+	org.apache.iceberg#iceberg-spark-runtime-3.5_2.12;1.7.1 from central in [default]
+	org.wildfly.openssl#wildfly-openssl;1.0.7.Final from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   5   |   0   |   0   |   0   ||   5   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-cd42f624-9545-4760-b476-7022651fc466
+	confs: [default]
+	0 artifacts copied, 5 already retrieved (0kB/3ms)
+26/11/06 00:33:17 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/11/06 00:33:18 INFO SparkContext: Running Spark version 3.5.3
+26/11/06 00:33:18 INFO SparkContext: OS info Linux, 7.0.12-linuxkit, aarch64
+26/11/06 00:33:18 INFO SparkContext: Java version 17.0.12
+26/11/06 00:33:18 INFO ResourceUtils: ==============================================================
+26/11/06 00:33:18 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/11/06 00:33:18 INFO ResourceUtils: ==============================================================
+26/11/06 00:33:18 INFO SparkContext: Submitted application: mg7-lab1
+26/11/06 00:33:18 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/11/06 00:33:18 INFO ResourceProfile: Limiting resource is cpu
+26/11/06 00:33:18 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/11/06 00:33:18 INFO SecurityManager: Changing view acls to: root
+26/11/06 00:33:18 INFO SecurityManager: Changing modify acls to: root
+26/11/06 00:33:18 INFO SecurityManager: Changing view acls groups to: 
+26/11/06 00:33:18 INFO SecurityManager: Changing modify acls groups to: 
+26/11/06 00:33:18 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+26/11/06 00:33:18 INFO Utils: Successfully started service 'sparkDriver' on port 44625.
+26/11/06 00:33:18 INFO SparkEnv: Registering MapOutputTracker
+26/11/06 00:33:18 INFO SparkEnv: Registering BlockManagerMaster
+26/11/06 00:33:18 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/11/06 00:33:18 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/11/06 00:33:18 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/11/06 00:33:18 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-17a87e72-758c-4884-a389-c07dcb07076f
+26/11/06 00:33:18 INFO MemoryStore: MemoryStore started with capacity 1663.2 MiB
+26/11/06 00:33:18 INFO SparkEnv: Registering OutputCommitCoordinator
+26/11/06 00:33:18 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/11/06 00:33:18 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/11/06 00:33:18 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar at spark://347cd5422e8c:44625/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar at spark://347cd5422e8c:44625/jars/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar at spark://347cd5422e8c:44625/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar at spark://347cd5422e8c:44625/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar at spark://347cd5422e8c:44625/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar at file:///root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: Copying /root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar
+26/11/06 00:33:18 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar at file:///root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: Copying /root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar
+26/11/06 00:33:18 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar at file:///root/.ivy2/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: Copying /root/.ivy2/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.apache.hadoop_hadoop-aws-3.3.4.jar
+26/11/06 00:33:18 INFO SparkContext: Added file file:///root/.ivy2/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar at file:///root/.ivy2/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: Copying /root/.ivy2/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar
+26/11/06 00:33:18 INFO SparkContext: Added file file:///root/.ivy2/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar at file:///root/.ivy2/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: Copying /root/.ivy2/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar
+26/11/06 00:33:18 INFO Executor: Starting executor ID driver on host 347cd5422e8c
+26/11/06 00:33:18 INFO Executor: OS info Linux, 7.0.12-linuxkit, aarch64
+26/11/06 00:33:18 INFO Executor: Java version 17.0.12
+26/11/06 00:33:18 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/11/06 00:33:18 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@25e79e3a for default.
+26/11/06 00:33:18 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: /root/.ivy2/jars/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar has been previously copied to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar
+26/11/06 00:33:18 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: /root/.ivy2/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar has been previously copied to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.apache.hadoop_hadoop-aws-3.3.4.jar
+26/11/06 00:33:18 INFO Executor: Fetching file:///root/.ivy2/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: /root/.ivy2/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar has been previously copied to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar
+26/11/06 00:33:18 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: /root/.ivy2/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar has been previously copied to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar
+26/11/06 00:33:18 INFO Executor: Fetching file:///root/.ivy2/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: /root/.ivy2/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar has been previously copied to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar
+26/11/06 00:33:18 INFO Executor: Fetching spark://347cd5422e8c:44625/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO TransportClientFactory: Successfully created connection to 347cd5422e8c/172.22.0.7:44625 after 7 ms (0 ms spent in bootstraps)
+26/11/06 00:33:18 INFO Utils: Fetching spark://347cd5422e8c:44625/jars/org.apache.hadoop_hadoop-aws-3.3.4.jar to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/fetchFileTemp8427246724784922356.tmp
+26/11/06 00:33:18 INFO Utils: /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/fetchFileTemp8427246724784922356.tmp has been previously copied to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.apache.hadoop_hadoop-aws-3.3.4.jar
+26/11/06 00:33:18 INFO Executor: Adding file:/tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.apache.hadoop_hadoop-aws-3.3.4.jar to class loader default
+26/11/06 00:33:18 INFO Executor: Fetching spark://347cd5422e8c:44625/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: Fetching spark://347cd5422e8c:44625/jars/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/fetchFileTemp996263329080306056.tmp
+26/11/06 00:33:18 INFO Utils: /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/fetchFileTemp996263329080306056.tmp has been previously copied to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar
+26/11/06 00:33:18 INFO Executor: Adding file:/tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.wildfly.openssl_wildfly-openssl-1.0.7.Final.jar to class loader default
+26/11/06 00:33:18 INFO Executor: Fetching spark://347cd5422e8c:44625/jars/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: Fetching spark://347cd5422e8c:44625/jars/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/fetchFileTemp12845685561850431803.tmp
+26/11/06 00:33:18 INFO Utils: /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/fetchFileTemp12845685561850431803.tmp has been previously copied to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar
+26/11/06 00:33:18 INFO Executor: Adding file:/tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.apache.iceberg_iceberg-aws-bundle-1.7.1.jar to class loader default
+26/11/06 00:33:18 INFO Executor: Fetching spark://347cd5422e8c:44625/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar with timestamp 1793925198142
+26/11/06 00:33:18 INFO Utils: Fetching spark://347cd5422e8c:44625/jars/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/fetchFileTemp3416569635621266305.tmp
+26/11/06 00:33:19 INFO Utils: /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/fetchFileTemp3416569635621266305.tmp has been previously copied to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar
+26/11/06 00:33:19 INFO Executor: Adding file:/tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/com.amazonaws_aws-java-sdk-bundle-1.12.262.jar to class loader default
+26/11/06 00:33:19 INFO Executor: Fetching spark://347cd5422e8c:44625/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar with timestamp 1793925198142
+26/11/06 00:33:19 INFO Utils: Fetching spark://347cd5422e8c:44625/jars/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/fetchFileTemp14457062956948133841.tmp
+26/11/06 00:33:19 INFO Utils: /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/fetchFileTemp14457062956948133841.tmp has been previously copied to /tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar
+26/11/06 00:33:19 INFO Executor: Adding file:/tmp/spark-2c2549c7-500c-4c0c-9ee0-e2b7cbc57c4f/userFiles-8dca9419-5957-4113-a78e-7284d80491f2/org.apache.iceberg_iceberg-spark-runtime-3.5_2.12-1.7.1.jar to class loader default
+26/11/06 00:33:19 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40001.
+26/11/06 00:33:19 INFO NettyBlockTransferService: Server created on 347cd5422e8c:40001
+26/11/06 00:33:19 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/11/06 00:33:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 347cd5422e8c, 40001, None)
+26/11/06 00:33:19 INFO BlockManagerMasterEndpoint: Registering block manager 347cd5422e8c:40001 with 1663.2 MiB RAM, BlockManagerId(driver, 347cd5422e8c, 40001, None)
+26/11/06 00:33:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 347cd5422e8c, 40001, None)
+26/11/06 00:33:19 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 347cd5422e8c, 40001, None)
+SPARK_VERSION=3.5.3
+SPARK_UI=http://347cd5422e8c:4040  (dari komputer host buka http://localhost:4040)
+26/11/06 00:33:19 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+RAW_COUNT=20000
+CLEAN_COUNT=19960
+REJECTED_COUNT=40
+
+[PAUSE] [PAUSE 1] Cleaning selesai. Amati Jobs (durasi, jumlah stage) untuk read + count.
+        Buka http://localhost:4040, amati Jobs/SQL/Stages/Executors, ambil screenshot.
+        (stdin bukan terminal interaktif -> pause dilewati)
+
+=== PERCOBAAN A: groupBy(city) -> shuffle ===
+== Physical Plan ==
+* HashAggregate (13)
++- Exchange (12)
+   +- * HashAggregate (11)
+      +- InMemoryTableScan (1)
+            +- InMemoryRelation (2)
+                  +- SortAggregate (10)
+                     +- * Sort (9)
+                        +- Exchange (8)
+                           +- SortAggregate (7)
+                              +- * Sort (6)
+                                 +- * Project (5)
+                                    +- * Filter (4)
+                                       +- Scan json  (3)
+
+
+(1) InMemoryTableScan
+Output [2]: [city#14, amount#6L]
+Arguments: [city#14, amount#6L]
+
+(2) InMemoryRelation
+Arguments: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23], CachedRDDBuilder(org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer@5b27b697,StorageLevel(disk, memory, 1 replicas),SortAggregate(key=[run_id#0, order_id#1L], functions=[first(event_time#2, false), first(city#14, false), first(product_id#4L, false), first(quantity#5L, false), first(amount#6L, false), first(sale_date#23, false)], output=[run_id#0, order_id#1L, event_time#73, city#75, product_id#77L, quantity#79L, amount#81L, sale_date#83])
++- *(2) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+   +- Exchange hashpartitioning(run_id#0, order_id#1L, 8), ENSURE_REQUIREMENTS, [plan_id=56]
+      +- SortAggregate(key=[run_id#0, order_id#1L], functions=[partial_first(event_time#2, false), partial_first(city#14, false), partial_first(product_id#4L, false), partial_first(quantity#5L, false), partial_first(amount#6L, false), partial_first(sale_date#23, false)], output=[run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107])
+         +- *(1) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+            +- *(1) Project [run_id#0, order_id#1L, event_time#2, initcap(trim(city#3, None)) AS city#14, product_id#4L, quantity#5L, amount#6L, cast(gettimestamp(event_time#2, yyyy-MM-dd'T'HH:mm:ss, TimestampType, Some(Etc/UTC), false) as date) AS sale_date#23]
+               +- *(1) Filter ((((isnotnull(quantity#5L) AND NOT (initcap(trim(city#3, None)) = )) AND isnotnull(amount#6L)) AND (amount#6L >= 0)) AND (quantity#5L > 0))
+                  +- FileScan json [run_id#0,order_id#1L,event_time#2,city#3,product_id#4L,quantity#5L,amount#6L] Batched: false, DataFilters: [isnotnull(quantity#5L), NOT (initcap(trim(city#3, None)) = ), isnotnull(amount#6L), (amount#6L >..., Format: JSON, Location: InMemoryFileIndex(8 paths)[s3a://raw/events/run_id=lab1/partition=0/offset-000000016222-000000020..., PartitionFilters: [], PushedFilters: [IsNotNull(quantity), IsNotNull(amount), GreaterThanOrEqual(amount,0), GreaterThan(quantity,0)], ReadSchema: struct<run_id:string,order_id:bigint,event_time:string,city:string,product_id:bigint,quantity:big...
+,None)
+
+(3) Scan json 
+Output [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+Batched: false
+Location: InMemoryFileIndex [s3a://raw/events/run_id=lab1/partition=0/offset-000000016222-000000020881.jsonl, ... 7 entries]
+PushedFilters: [IsNotNull(quantity), IsNotNull(amount), GreaterThanOrEqual(amount,0), GreaterThan(quantity,0)]
+ReadSchema: struct<run_id:string,order_id:bigint,event_time:string,city:string,product_id:bigint,quantity:bigint,amount:bigint>
+
+(4) Filter [codegen id : 1]
+Input [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+Condition : ((((isnotnull(quantity#5L) AND NOT (initcap(trim(city#3, None)) = )) AND isnotnull(amount#6L)) AND (amount#6L >= 0)) AND (quantity#5L > 0))
+
+(5) Project [codegen id : 1]
+Output [8]: [run_id#0, order_id#1L, event_time#2, initcap(trim(city#3, None)) AS city#14, product_id#4L, quantity#5L, amount#6L, cast(gettimestamp(event_time#2, yyyy-MM-dd'T'HH:mm:ss, TimestampType, Some(Etc/UTC), false) as date) AS sale_date#23]
+Input [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+
+(6) Sort [codegen id : 1]
+Input [8]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+Arguments: [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+
+(7) SortAggregate
+Input [8]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+Keys [2]: [run_id#0, order_id#1L]
+Functions [6]: [partial_first(event_time#2, false), partial_first(city#14, false), partial_first(product_id#4L, false), partial_first(quantity#5L, false), partial_first(amount#6L, false), partial_first(sale_date#23, false)]
+Aggregate Attributes [12]: [first#84, valueSet#85, first#86, valueSet#87, first#88L, valueSet#89, first#90L, valueSet#91, first#92L, valueSet#93, first#94, valueSet#95]
+Results [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+
+(8) Exchange
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Arguments: hashpartitioning(run_id#0, order_id#1L, 8), ENSURE_REQUIREMENTS, [plan_id=56]
+
+(9) Sort [codegen id : 2]
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Arguments: [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+
+(10) SortAggregate
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Keys [2]: [run_id#0, order_id#1L]
+Functions [6]: [first(event_time#2, false), first(city#14, false), first(product_id#4L, false), first(quantity#5L, false), first(amount#6L, false), first(sale_date#23, false)]
+Aggregate Attributes [6]: [first(event_time#2)()#72, first(city#14)()#74, first(product_id#4L)()#76L, first(quantity#5L)()#78L, first(amount#6L)()#80L, first(sale_date#23)()#82]
+Results [8]: [run_id#0, order_id#1L, first(event_time#2)()#72 AS event_time#73, first(city#14)()#74 AS city#75, first(product_id#4L)()#76L AS product_id#77L, first(quantity#5L)()#78L AS quantity#79L, first(amount#6L)()#80L AS amount#81L, first(sale_date#23)()#82 AS sale_date#83]
+
+(11) HashAggregate [codegen id : 1]
+Input [2]: [city#14, amount#6L]
+Keys [1]: [city#14]
+Functions [2]: [partial_count(1), partial_sum(amount#6L)]
+Aggregate Attributes [2]: [count#515L, sum#516L]
+Results [3]: [city#14, count#517L, sum#518L]
+
+(12) Exchange
+Input [3]: [city#14, count#517L, sum#518L]
+Arguments: hashpartitioning(city#14, 8), ENSURE_REQUIREMENTS, [plan_id=114]
+
+(13) HashAggregate [codegen id : 2]
+Input [3]: [city#14, count#517L, sum#518L]
+Keys [1]: [city#14]
+Functions [2]: [count(1), sum(amount#6L)]
+Aggregate Attributes [2]: [count(1)#388L, sum(amount#6L)#390L]
+Results [3]: [city#14, count(1)#388L AS orders#389L, sum(amount#6L)#390L AS gross_sales#391L]
+
+
+BENCH A_groupby_baseline ulangan=1 0.197 detik
+BENCH A_groupby_baseline ulangan=2 0.045 detik
+BENCH A_groupby_baseline ulangan=3 0.047 detik
+HASIL_A {'Jakarta': (2023, 515998), 'Denpasar': (15937, 4080633), 'Surabaya': (2000, 510685)}
+
+[PAUSE] [PAUSE 2] Percobaan A selesai. Buka SQL -> klik query agregasi; Stages -> shuffle read/write.
+        Buka http://localhost:4040, amati Jobs/SQL/Stages/Executors, ambil screenshot.
+        (stdin bukan terminal interaktif -> pause dilewati)
+
+=== PERCOBAAN B: repartition(city) -> data skew ===
+PARTITION_BEFORE_SALTING [(0, 0), (1, 0), (2, 2023), (3, 15937), (4, 0), (5, 0), (6, 2000), (7, 0)]
+== Physical Plan ==
+* HashAggregate (15)
++- * HashAggregate (14)
+   +- InMemoryTableScan (1)
+         +- InMemoryRelation (2)
+               +- Exchange (13)
+                  +- InMemoryTableScan (3)
+                        +- InMemoryRelation (4)
+                              +- SortAggregate (12)
+                                 +- * Sort (11)
+                                    +- Exchange (10)
+                                       +- SortAggregate (9)
+                                          +- * Sort (8)
+                                             +- * Project (7)
+                                                +- * Filter (6)
+                                                   +- Scan json  (5)
+
+
+(1) InMemoryTableScan
+Output [2]: [city#14, amount#6L]
+Arguments: [city#14, amount#6L]
+
+(2) InMemoryRelation
+Arguments: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23], CachedRDDBuilder(org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer@5b27b697,StorageLevel(disk, memory, 1 replicas),Exchange hashpartitioning(city#14, 8), REPARTITION_BY_NUM, [plan_id=131]
++- InMemoryTableScan [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+      +- InMemoryRelation [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23], StorageLevel(disk, memory, 1 replicas)
+            +- SortAggregate(key=[run_id#0, order_id#1L], functions=[first(event_time#2, false), first(city#14, false), first(product_id#4L, false), first(quantity#5L, false), first(amount#6L, false), first(sale_date#23, false)], output=[run_id#0, order_id#1L, event_time#73, city#75, product_id#77L, quantity#79L, amount#81L, sale_date#83])
+               +- *(2) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+                  +- Exchange hashpartitioning(run_id#0, order_id#1L, 8), ENSURE_REQUIREMENTS, [plan_id=56]
+                     +- SortAggregate(key=[run_id#0, order_id#1L], functions=[partial_first(event_time#2, false), partial_first(city#14, false), partial_first(product_id#4L, false), partial_first(quantity#5L, false), partial_first(amount#6L, false), partial_first(sale_date#23, false)], output=[run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107])
+                        +- *(1) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+                           +- *(1) Project [run_id#0, order_id#1L, event_time#2, initcap(trim(city#3, None)) AS city#14, product_id#4L, quantity#5L, amount#6L, cast(gettimestamp(event_time#2, yyyy-MM-dd'T'HH:mm:ss, TimestampType, Some(Etc/UTC), false) as date) AS sale_date#23]
+                              +- *(1) Filter ((((isnotnull(quantity#5L) AND NOT (initcap(trim(city#3, None)) = )) AND isnotnull(amount#6L)) AND (amount#6L >= 0)) AND (quantity#5L > 0))
+                                 +- FileScan json [run_id#0,order_id#1L,event_time#2,city#3,product_id#4L,quantity#5L,amount#6L] Batched: false, DataFilters: [isnotnull(quantity#5L), NOT (initcap(trim(city#3, None)) = ), isnotnull(amount#6L), (amount#6L >..., Format: JSON, Location: InMemoryFileIndex(8 paths)[s3a://raw/events/run_id=lab1/partition=0/offset-000000016222-000000020..., PartitionFilters: [], PushedFilters: [IsNotNull(quantity), IsNotNull(amount), GreaterThanOrEqual(amount,0), GreaterThan(quantity,0)], ReadSchema: struct<run_id:string,order_id:bigint,event_time:string,city:string,product_id:bigint,quantity:big...
+,None)
+
+(3) InMemoryTableScan
+Output [8]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+Arguments: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+
+(4) InMemoryRelation
+Arguments: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23], CachedRDDBuilder(org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer@5b27b697,StorageLevel(disk, memory, 1 replicas),SortAggregate(key=[run_id#0, order_id#1L], functions=[first(event_time#2, false), first(city#14, false), first(product_id#4L, false), first(quantity#5L, false), first(amount#6L, false), first(sale_date#23, false)], output=[run_id#0, order_id#1L, event_time#73, city#75, product_id#77L, quantity#79L, amount#81L, sale_date#83])
++- *(2) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+   +- Exchange hashpartitioning(run_id#0, order_id#1L, 8), ENSURE_REQUIREMENTS, [plan_id=56]
+      +- SortAggregate(key=[run_id#0, order_id#1L], functions=[partial_first(event_time#2, false), partial_first(city#14, false), partial_first(product_id#4L, false), partial_first(quantity#5L, false), partial_first(amount#6L, false), partial_first(sale_date#23, false)], output=[run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107])
+         +- *(1) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+            +- *(1) Project [run_id#0, order_id#1L, event_time#2, initcap(trim(city#3, None)) AS city#14, product_id#4L, quantity#5L, amount#6L, cast(gettimestamp(event_time#2, yyyy-MM-dd'T'HH:mm:ss, TimestampType, Some(Etc/UTC), false) as date) AS sale_date#23]
+               +- *(1) Filter ((((isnotnull(quantity#5L) AND NOT (initcap(trim(city#3, None)) = )) AND isnotnull(amount#6L)) AND (amount#6L >= 0)) AND (quantity#5L > 0))
+                  +- FileScan json [run_id#0,order_id#1L,event_time#2,city#3,product_id#4L,quantity#5L,amount#6L] Batched: false, DataFilters: [isnotnull(quantity#5L), NOT (initcap(trim(city#3, None)) = ), isnotnull(amount#6L), (amount#6L >..., Format: JSON, Location: InMemoryFileIndex(8 paths)[s3a://raw/events/run_id=lab1/partition=0/offset-000000016222-000000020..., PartitionFilters: [], PushedFilters: [IsNotNull(quantity), IsNotNull(amount), GreaterThanOrEqual(amount,0), GreaterThan(quantity,0)], ReadSchema: struct<run_id:string,order_id:bigint,event_time:string,city:string,product_id:bigint,quantity:big...
+,None)
+
+(5) Scan json 
+Output [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+Batched: false
+Location: InMemoryFileIndex [s3a://raw/events/run_id=lab1/partition=0/offset-000000016222-000000020881.jsonl, ... 7 entries]
+PushedFilters: [IsNotNull(quantity), IsNotNull(amount), GreaterThanOrEqual(amount,0), GreaterThan(quantity,0)]
+ReadSchema: struct<run_id:string,order_id:bigint,event_time:string,city:string,product_id:bigint,quantity:bigint,amount:bigint>
+
+(6) Filter [codegen id : 1]
+Input [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+Condition : ((((isnotnull(quantity#5L) AND NOT (initcap(trim(city#3, None)) = )) AND isnotnull(amount#6L)) AND (amount#6L >= 0)) AND (quantity#5L > 0))
+
+(7) Project [codegen id : 1]
+Output [8]: [run_id#0, order_id#1L, event_time#2, initcap(trim(city#3, None)) AS city#14, product_id#4L, quantity#5L, amount#6L, cast(gettimestamp(event_time#2, yyyy-MM-dd'T'HH:mm:ss, TimestampType, Some(Etc/UTC), false) as date) AS sale_date#23]
+Input [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+
+(8) Sort [codegen id : 1]
+Input [8]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+Arguments: [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+
+(9) SortAggregate
+Input [8]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+Keys [2]: [run_id#0, order_id#1L]
+Functions [6]: [partial_first(event_time#2, false), partial_first(city#14, false), partial_first(product_id#4L, false), partial_first(quantity#5L, false), partial_first(amount#6L, false), partial_first(sale_date#23, false)]
+Aggregate Attributes [12]: [first#84, valueSet#85, first#86, valueSet#87, first#88L, valueSet#89, first#90L, valueSet#91, first#92L, valueSet#93, first#94, valueSet#95]
+Results [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+
+(10) Exchange
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Arguments: hashpartitioning(run_id#0, order_id#1L, 8), ENSURE_REQUIREMENTS, [plan_id=56]
+
+(11) Sort [codegen id : 2]
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Arguments: [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+
+(12) SortAggregate
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Keys [2]: [run_id#0, order_id#1L]
+Functions [6]: [first(event_time#2, false), first(city#14, false), first(product_id#4L, false), first(quantity#5L, false), first(amount#6L, false), first(sale_date#23, false)]
+Aggregate Attributes [6]: [first(event_time#2)()#72, first(city#14)()#74, first(product_id#4L)()#76L, first(quantity#5L)()#78L, first(amount#6L)()#80L, first(sale_date#23)()#82]
+Results [8]: [run_id#0, order_id#1L, first(event_time#2)()#72 AS event_time#73, first(city#14)()#74 AS city#75, first(product_id#4L)()#76L AS product_id#77L, first(quantity#5L)()#78L AS quantity#79L, first(amount#6L)()#80L AS amount#81L, first(sale_date#23)()#82 AS sale_date#83]
+
+(13) Exchange
+Input [8]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+Arguments: hashpartitioning(city#14, 8), REPARTITION_BY_NUM, [plan_id=131]
+
+(14) HashAggregate [codegen id : 1]
+Input [2]: [city#14, amount#6L]
+Keys [1]: [city#14]
+Functions [2]: [partial_count(1), partial_sum(amount#6L)]
+Aggregate Attributes [2]: [count#1348L, sum#1349L]
+Results [3]: [city#14, count#1350L, sum#1351L]
+
+(15) HashAggregate [codegen id : 1]
+Input [3]: [city#14, count#1350L, sum#1351L]
+Keys [1]: [city#14]
+Functions [2]: [count(1), sum(amount#6L)]
+Aggregate Attributes [2]: [count(1)#1221L, sum(amount#6L)#1223L]
+Results [3]: [city#14, count(1)#1221L AS orders#1222L, sum(amount#6L)#1223L AS gross_sales#1224L]
+
+
+BENCH B_skew_before ulangan=1 0.059 detik
+BENCH B_skew_before ulangan=2 0.035 detik
+BENCH B_skew_before ulangan=3 0.038 detik
+
+=== PERCOBAAN C: key salting + agregasi dua tahap ===
+PARTITION_AFTER_SALTING [(0, 2491), (1, 1875), (2, 5574), (3, 4475), (4, 254), (5, 1229), (6, 1428), (7, 2634)]
+== Physical Plan ==
+* HashAggregate (19)
++- Exchange (18)
+   +- * HashAggregate (17)
+      +- * HashAggregate (16)
+         +- * HashAggregate (15)
+            +- InMemoryTableScan (1)
+                  +- InMemoryRelation (2)
+                        +- Exchange (14)
+                           +- * Project (13)
+                              +- InMemoryTableScan (3)
+                                    +- InMemoryRelation (4)
+                                          +- SortAggregate (12)
+                                             +- * Sort (11)
+                                                +- Exchange (10)
+                                                   +- SortAggregate (9)
+                                                      +- * Sort (8)
+                                                         +- * Project (7)
+                                                            +- * Filter (6)
+                                                               +- Scan json  (5)
+
+
+(1) InMemoryTableScan
+Output [3]: [city#14, amount#6L, salt#1392L]
+Arguments: [city#14, amount#6L, salt#1392L]
+
+(2) InMemoryRelation
+Arguments: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23, salt#1392L], CachedRDDBuilder(org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer@5b27b697,StorageLevel(disk, memory, 1 replicas),Exchange hashpartitioning(city#14, salt#1392L, 8), REPARTITION_BY_NUM, [plan_id=189]
++- *(1) Project [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23, pmod(xxhash64(order_id#1L, 42), 16) AS salt#1392L]
+   +- InMemoryTableScan [amount#6L, city#14, event_time#2, order_id#1L, product_id#4L, quantity#5L, run_id#0, sale_date#23]
+         +- InMemoryRelation [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23], StorageLevel(disk, memory, 1 replicas)
+               +- SortAggregate(key=[run_id#0, order_id#1L], functions=[first(event_time#2, false), first(city#14, false), first(product_id#4L, false), first(quantity#5L, false), first(amount#6L, false), first(sale_date#23, false)], output=[run_id#0, order_id#1L, event_time#73, city#75, product_id#77L, quantity#79L, amount#81L, sale_date#83])
+                  +- *(2) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+                     +- Exchange hashpartitioning(run_id#0, order_id#1L, 8), ENSURE_REQUIREMENTS, [plan_id=56]
+                        +- SortAggregate(key=[run_id#0, order_id#1L], functions=[partial_first(event_time#2, false), partial_first(city#14, false), partial_first(product_id#4L, false), partial_first(quantity#5L, false), partial_first(amount#6L, false), partial_first(sale_date#23, false)], output=[run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107])
+                           +- *(1) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+                              +- *(1) Project [run_id#0, order_id#1L, event_time#2, initcap(trim(city#3, None)) AS city#14, product_id#4L, quantity#5L, amount#6L, cast(gettimestamp(event_time#2, yyyy-MM-dd'T'HH:mm:ss, TimestampType, Some(Etc/UTC), false) as date) AS sale_date#23]
+                                 +- *(1) Filter ((((isnotnull(quantity#5L) AND NOT (initcap(trim(city#3, None)) = )) AND isnotnull(amount#6L)) AND (amount#6L >= 0)) AND (quantity#5L > 0))
+                                    +- FileScan json [run_id#0,order_id#1L,event_time#2,city#3,product_id#4L,quantity#5L,amount#6L] Batched: false, DataFilters: [isnotnull(quantity#5L), NOT (initcap(trim(city#3, None)) = ), isnotnull(amount#6L), (amount#6L >..., Format: JSON, Location: InMemoryFileIndex(8 paths)[s3a://raw/events/run_id=lab1/partition=0/offset-000000016222-000000020..., PartitionFilters: [], PushedFilters: [IsNotNull(quantity), IsNotNull(amount), GreaterThanOrEqual(amount,0), GreaterThan(quantity,0)], ReadSchema: struct<run_id:string,order_id:bigint,event_time:string,city:string,product_id:bigint,quantity:big...
+,None)
+
+(3) InMemoryTableScan
+Output [8]: [amount#6L, city#14, event_time#2, order_id#1L, product_id#4L, quantity#5L, run_id#0, sale_date#23]
+Arguments: [amount#6L, city#14, event_time#2, order_id#1L, product_id#4L, quantity#5L, run_id#0, sale_date#23]
+
+(4) InMemoryRelation
+Arguments: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23], CachedRDDBuilder(org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer@5b27b697,StorageLevel(disk, memory, 1 replicas),SortAggregate(key=[run_id#0, order_id#1L], functions=[first(event_time#2, false), first(city#14, false), first(product_id#4L, false), first(quantity#5L, false), first(amount#6L, false), first(sale_date#23, false)], output=[run_id#0, order_id#1L, event_time#73, city#75, product_id#77L, quantity#79L, amount#81L, sale_date#83])
++- *(2) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+   +- Exchange hashpartitioning(run_id#0, order_id#1L, 8), ENSURE_REQUIREMENTS, [plan_id=56]
+      +- SortAggregate(key=[run_id#0, order_id#1L], functions=[partial_first(event_time#2, false), partial_first(city#14, false), partial_first(product_id#4L, false), partial_first(quantity#5L, false), partial_first(amount#6L, false), partial_first(sale_date#23, false)], output=[run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107])
+         +- *(1) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+            +- *(1) Project [run_id#0, order_id#1L, event_time#2, initcap(trim(city#3, None)) AS city#14, product_id#4L, quantity#5L, amount#6L, cast(gettimestamp(event_time#2, yyyy-MM-dd'T'HH:mm:ss, TimestampType, Some(Etc/UTC), false) as date) AS sale_date#23]
+               +- *(1) Filter ((((isnotnull(quantity#5L) AND NOT (initcap(trim(city#3, None)) = )) AND isnotnull(amount#6L)) AND (amount#6L >= 0)) AND (quantity#5L > 0))
+                  +- FileScan json [run_id#0,order_id#1L,event_time#2,city#3,product_id#4L,quantity#5L,amount#6L] Batched: false, DataFilters: [isnotnull(quantity#5L), NOT (initcap(trim(city#3, None)) = ), isnotnull(amount#6L), (amount#6L >..., Format: JSON, Location: InMemoryFileIndex(8 paths)[s3a://raw/events/run_id=lab1/partition=0/offset-000000016222-000000020..., PartitionFilters: [], PushedFilters: [IsNotNull(quantity), IsNotNull(amount), GreaterThanOrEqual(amount,0), GreaterThan(quantity,0)], ReadSchema: struct<run_id:string,order_id:bigint,event_time:string,city:string,product_id:bigint,quantity:big...
+,None)
+
+(5) Scan json 
+Output [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+Batched: false
+Location: InMemoryFileIndex [s3a://raw/events/run_id=lab1/partition=0/offset-000000016222-000000020881.jsonl, ... 7 entries]
+PushedFilters: [IsNotNull(quantity), IsNotNull(amount), GreaterThanOrEqual(amount,0), GreaterThan(quantity,0)]
+ReadSchema: struct<run_id:string,order_id:bigint,event_time:string,city:string,product_id:bigint,quantity:bigint,amount:bigint>
+
+(6) Filter [codegen id : 1]
+Input [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+Condition : ((((isnotnull(quantity#5L) AND NOT (initcap(trim(city#3, None)) = )) AND isnotnull(amount#6L)) AND (amount#6L >= 0)) AND (quantity#5L > 0))
+
+(7) Project [codegen id : 1]
+Output [8]: [run_id#0, order_id#1L, event_time#2, initcap(trim(city#3, None)) AS city#14, product_id#4L, quantity#5L, amount#6L, cast(gettimestamp(event_time#2, yyyy-MM-dd'T'HH:mm:ss, TimestampType, Some(Etc/UTC), false) as date) AS sale_date#23]
+Input [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+
+(8) Sort [codegen id : 1]
+Input [8]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+Arguments: [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+
+(9) SortAggregate
+Input [8]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+Keys [2]: [run_id#0, order_id#1L]
+Functions [6]: [partial_first(event_time#2, false), partial_first(city#14, false), partial_first(product_id#4L, false), partial_first(quantity#5L, false), partial_first(amount#6L, false), partial_first(sale_date#23, false)]
+Aggregate Attributes [12]: [first#84, valueSet#85, first#86, valueSet#87, first#88L, valueSet#89, first#90L, valueSet#91, first#92L, valueSet#93, first#94, valueSet#95]
+Results [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+
+(10) Exchange
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Arguments: hashpartitioning(run_id#0, order_id#1L, 8), ENSURE_REQUIREMENTS, [plan_id=56]
+
+(11) Sort [codegen id : 2]
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Arguments: [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+
+(12) SortAggregate
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Keys [2]: [run_id#0, order_id#1L]
+Functions [6]: [first(event_time#2, false), first(city#14, false), first(product_id#4L, false), first(quantity#5L, false), first(amount#6L, false), first(sale_date#23, false)]
+Aggregate Attributes [6]: [first(event_time#2)()#72, first(city#14)()#74, first(product_id#4L)()#76L, first(quantity#5L)()#78L, first(amount#6L)()#80L, first(sale_date#23)()#82]
+Results [8]: [run_id#0, order_id#1L, first(event_time#2)()#72 AS event_time#73, first(city#14)()#74 AS city#75, first(product_id#4L)()#76L AS product_id#77L, first(quantity#5L)()#78L AS quantity#79L, first(amount#6L)()#80L AS amount#81L, first(sale_date#23)()#82 AS sale_date#83]
+
+(13) Project [codegen id : 1]
+Output [9]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23, pmod(xxhash64(order_id#1L, 42), 16) AS salt#1392L]
+Input [8]: [amount#6L, city#14, event_time#2, order_id#1L, product_id#4L, quantity#5L, run_id#0, sale_date#23]
+
+(14) Exchange
+Input [9]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23, salt#1392L]
+Arguments: hashpartitioning(city#14, salt#1392L, 8), REPARTITION_BY_NUM, [plan_id=189]
+
+(15) HashAggregate [codegen id : 1]
+Input [3]: [city#14, amount#6L, salt#1392L]
+Keys [2]: [city#14, salt#1392L]
+Functions [2]: [partial_count(1), partial_sum(amount#6L)]
+Aggregate Attributes [2]: [count#2233L, sum#2234L]
+Results [4]: [city#14, salt#1392L, count#2235L, sum#2236L]
+
+(16) HashAggregate [codegen id : 1]
+Input [4]: [city#14, salt#1392L, count#2235L, sum#2236L]
+Keys [2]: [city#14, salt#1392L]
+Functions [2]: [count(1), sum(amount#6L)]
+Aggregate Attributes [2]: [count(1)#2075L, sum(amount#6L)#2077L]
+Results [3]: [city#14, count(1)#2075L AS orders_partial#2076L, sum(amount#6L)#2077L AS sales_partial#2078L]
+
+(17) HashAggregate [codegen id : 1]
+Input [3]: [city#14, orders_partial#2076L, sales_partial#2078L]
+Keys [1]: [city#14]
+Functions [2]: [partial_sum(orders_partial#2076L), partial_sum(sales_partial#2078L)]
+Aggregate Attributes [2]: [sum#2229L, sum#2230L]
+Results [3]: [city#14, sum#2231L, sum#2232L]
+
+(18) Exchange
+Input [3]: [city#14, sum#2231L, sum#2232L]
+Arguments: hashpartitioning(city#14, 8), ENSURE_REQUIREMENTS, [plan_id=249]
+
+(19) HashAggregate [codegen id : 2]
+Input [3]: [city#14, sum#2231L, sum#2232L]
+Keys [1]: [city#14]
+Functions [2]: [sum(orders_partial#2076L), sum(sales_partial#2078L)]
+Aggregate Attributes [2]: [sum(orders_partial#2076L)#2087L, sum(sales_partial#2078L)#2089L]
+Results [3]: [city#14, sum(orders_partial#2076L)#2087L AS orders#2088L, sum(sales_partial#2078L)#2089L AS gross_sales#2090L]
+
+
+BENCH C_skew_after_salting ulangan=1 0.104 detik
+BENCH C_skew_after_salting ulangan=2 0.023 detik
+BENCH C_skew_after_salting ulangan=3 0.025 detik
+VALIDASI_SALTING_OK
+SKEW_RATIO before=6.388 after=2.234
+
+[PAUSE] [PAUSE 3] Percobaan B dan C selesai. Bandingkan task terbesar/durasi/shuffle di Stages (B vs C).
+        Buka http://localhost:4040, amati Jobs/SQL/Stages/Executors, ambil screenshot.
+        (stdin bukan terminal interaktif -> pause dilewati)
+
+=== PERCOBAAN D/E: SortMergeJoin vs BroadcastHashJoin ===
+== Physical Plan ==
+* HashAggregate (22)
++- Exchange (21)
+   +- * HashAggregate (20)
+      +- * Project (19)
+         +- * SortMergeJoin Inner (18)
+            :- * Sort (13)
+            :  +- Exchange (12)
+            :     +- * Filter (11)
+            :        +- InMemoryTableScan (1)
+            :              +- InMemoryRelation (2)
+            :                    +- SortAggregate (10)
+            :                       +- * Sort (9)
+            :                          +- Exchange (8)
+            :                             +- SortAggregate (7)
+            :                                +- * Sort (6)
+            :                                   +- * Project (5)
+            :                                      +- * Filter (4)
+            :                                         +- Scan json  (3)
+            +- * Sort (17)
+               +- Exchange (16)
+                  +- * Project (15)
+                     +- * Range (14)
+
+
+(1) InMemoryTableScan
+Output [2]: [product_id#4L, amount#6L]
+Arguments: [product_id#4L, amount#6L], [isnotnull(product_id#4L)]
+
+(2) InMemoryRelation
+Arguments: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23], CachedRDDBuilder(org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer@5b27b697,StorageLevel(disk, memory, 1 replicas),SortAggregate(key=[run_id#0, order_id#1L], functions=[first(event_time#2, false), first(city#14, false), first(product_id#4L, false), first(quantity#5L, false), first(amount#6L, false), first(sale_date#23, false)], output=[run_id#0, order_id#1L, event_time#73, city#75, product_id#77L, quantity#79L, amount#81L, sale_date#83])
++- *(2) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+   +- Exchange hashpartitioning(run_id#0, order_id#1L, 8), ENSURE_REQUIREMENTS, [plan_id=56]
+      +- SortAggregate(key=[run_id#0, order_id#1L], functions=[partial_first(event_time#2, false), partial_first(city#14, false), partial_first(product_id#4L, false), partial_first(quantity#5L, false), partial_first(amount#6L, false), partial_first(sale_date#23, false)], output=[run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107])
+         +- *(1) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+            +- *(1) Project [run_id#0, order_id#1L, event_time#2, initcap(trim(city#3, None)) AS city#14, product_id#4L, quantity#5L, amount#6L, cast(gettimestamp(event_time#2, yyyy-MM-dd'T'HH:mm:ss, TimestampType, Some(Etc/UTC), false) as date) AS sale_date#23]
+               +- *(1) Filter ((((isnotnull(quantity#5L) AND NOT (initcap(trim(city#3, None)) = )) AND isnotnull(amount#6L)) AND (amount#6L >= 0)) AND (quantity#5L > 0))
+                  +- FileScan json [run_id#0,order_id#1L,event_time#2,city#3,product_id#4L,quantity#5L,amount#6L] Batched: false, DataFilters: [isnotnull(quantity#5L), NOT (initcap(trim(city#3, None)) = ), isnotnull(amount#6L), (amount#6L >..., Format: JSON, Location: InMemoryFileIndex(8 paths)[s3a://raw/events/run_id=lab1/partition=0/offset-000000016222-000000020..., PartitionFilters: [], PushedFilters: [IsNotNull(quantity), IsNotNull(amount), GreaterThanOrEqual(amount,0), GreaterThan(quantity,0)], ReadSchema: struct<run_id:string,order_id:bigint,event_time:string,city:string,product_id:bigint,quantity:big...
+,None)
+
+(3) Scan json 
+Output [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+Batched: false
+Location: InMemoryFileIndex [s3a://raw/events/run_id=lab1/partition=0/offset-000000016222-000000020881.jsonl, ... 7 entries]
+PushedFilters: [IsNotNull(quantity), IsNotNull(amount), GreaterThanOrEqual(amount,0), GreaterThan(quantity,0)]
+ReadSchema: struct<run_id:string,order_id:bigint,event_time:string,city:string,product_id:bigint,quantity:bigint,amount:bigint>
+
+(4) Filter [codegen id : 1]
+Input [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+Condition : ((((isnotnull(quantity#5L) AND NOT (initcap(trim(city#3, None)) = )) AND isnotnull(amount#6L)) AND (amount#6L >= 0)) AND (quantity#5L > 0))
+
+(5) Project [codegen id : 1]
+Output [8]: [run_id#0, order_id#1L, event_time#2, initcap(trim(city#3, None)) AS city#14, product_id#4L, quantity#5L, amount#6L, cast(gettimestamp(event_time#2, yyyy-MM-dd'T'HH:mm:ss, TimestampType, Some(Etc/UTC), false) as date) AS sale_date#23]
+Input [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+
+(6) Sort [codegen id : 1]
+Input [8]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+Arguments: [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+
+(7) SortAggregate
+Input [8]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+Keys [2]: [run_id#0, order_id#1L]
+Functions [6]: [partial_first(event_time#2, false), partial_first(city#14, false), partial_first(product_id#4L, false), partial_first(quantity#5L, false), partial_first(amount#6L, false), partial_first(sale_date#23, false)]
+Aggregate Attributes [12]: [first#84, valueSet#85, first#86, valueSet#87, first#88L, valueSet#89, first#90L, valueSet#91, first#92L, valueSet#93, first#94, valueSet#95]
+Results [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+
+(8) Exchange
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Arguments: hashpartitioning(run_id#0, order_id#1L, 8), ENSURE_REQUIREMENTS, [plan_id=56]
+
+(9) Sort [codegen id : 2]
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Arguments: [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+
+(10) SortAggregate
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Keys [2]: [run_id#0, order_id#1L]
+Functions [6]: [first(event_time#2, false), first(city#14, false), first(product_id#4L, false), first(quantity#5L, false), first(amount#6L, false), first(sale_date#23, false)]
+Aggregate Attributes [6]: [first(event_time#2)()#72, first(city#14)()#74, first(product_id#4L)()#76L, first(quantity#5L)()#78L, first(amount#6L)()#80L, first(sale_date#23)()#82]
+Results [8]: [run_id#0, order_id#1L, first(event_time#2)()#72 AS event_time#73, first(city#14)()#74 AS city#75, first(product_id#4L)()#76L AS product_id#77L, first(quantity#5L)()#78L AS quantity#79L, first(amount#6L)()#80L AS amount#81L, first(sale_date#23)()#82 AS sale_date#83]
+
+(11) Filter [codegen id : 1]
+Input [2]: [product_id#4L, amount#6L]
+Condition : isnotnull(product_id#4L)
+
+(12) Exchange
+Input [2]: [product_id#4L, amount#6L]
+Arguments: hashpartitioning(product_id#4L, 8), ENSURE_REQUIREMENTS, [plan_id=306]
+
+(13) Sort [codegen id : 2]
+Input [2]: [product_id#4L, amount#6L]
+Arguments: [product_id#4L ASC NULLS FIRST], false, 0
+
+(14) Range [codegen id : 3]
+Output [1]: [id#2332L]
+Arguments: Range (1, 201, step=1, splits=Some(4))
+
+(15) Project [codegen id : 3]
+Output [2]: [id#2332L AS product_id#2334L, elt(cast((pmod(id#2332L, 4) + 1) as int), Elektronik, Fashion, Makanan, Rumah Tangga, false) AS category#2336]
+Input [1]: [id#2332L]
+
+(16) Exchange
+Input [2]: [product_id#2334L, category#2336]
+Arguments: hashpartitioning(product_id#2334L, 8), ENSURE_REQUIREMENTS, [plan_id=312]
+
+(17) Sort [codegen id : 4]
+Input [2]: [product_id#2334L, category#2336]
+Arguments: [product_id#2334L ASC NULLS FIRST], false, 0
+
+(18) SortMergeJoin [codegen id : 5]
+Left keys [1]: [product_id#4L]
+Right keys [1]: [product_id#2334L]
+Join type: Inner
+Join condition: None
+
+(19) Project [codegen id : 5]
+Output [2]: [amount#6L, category#2336]
+Input [4]: [product_id#4L, amount#6L, product_id#2334L, category#2336]
+
+(20) HashAggregate [codegen id : 5]
+Input [2]: [amount#6L, category#2336]
+Keys [1]: [category#2336]
+Functions [2]: [partial_count(1), partial_sum(amount#6L)]
+Aggregate Attributes [2]: [count#2509L, sum#2510L]
+Results [3]: [category#2336, count#2511L, sum#2512L]
+
+(21) Exchange
+Input [3]: [category#2336, count#2511L, sum#2512L]
+Arguments: hashpartitioning(category#2336, 8), ENSURE_REQUIREMENTS, [plan_id=321]
+
+(22) HashAggregate [codegen id : 6]
+Input [3]: [category#2336, count#2511L, sum#2512L]
+Keys [1]: [category#2336]
+Functions [2]: [count(1), sum(amount#6L)]
+Aggregate Attributes [2]: [count(1)#2357L, sum(amount#6L)#2359L]
+Results [3]: [category#2336, count(1)#2357L AS orders#2358L, sum(amount#6L)#2359L AS gross_sales#2360L]
+
+
+== Physical Plan ==
+* HashAggregate (19)
++- Exchange (18)
+   +- * HashAggregate (17)
+      +- * Project (16)
+         +- * BroadcastHashJoin Inner BuildRight (15)
+            :- * Filter (11)
+            :  +- InMemoryTableScan (1)
+            :        +- InMemoryRelation (2)
+            :              +- SortAggregate (10)
+            :                 +- * Sort (9)
+            :                    +- Exchange (8)
+            :                       +- SortAggregate (7)
+            :                          +- * Sort (6)
+            :                             +- * Project (5)
+            :                                +- * Filter (4)
+            :                                   +- Scan json  (3)
+            +- BroadcastExchange (14)
+               +- * Project (13)
+                  +- * Range (12)
+
+
+(1) InMemoryTableScan
+Output [2]: [product_id#4L, amount#6L]
+Arguments: [product_id#4L, amount#6L], [isnotnull(product_id#4L)]
+
+(2) InMemoryRelation
+Arguments: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23], CachedRDDBuilder(org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer@5b27b697,StorageLevel(disk, memory, 1 replicas),SortAggregate(key=[run_id#0, order_id#1L], functions=[first(event_time#2, false), first(city#14, false), first(product_id#4L, false), first(quantity#5L, false), first(amount#6L, false), first(sale_date#23, false)], output=[run_id#0, order_id#1L, event_time#73, city#75, product_id#77L, quantity#79L, amount#81L, sale_date#83])
++- *(2) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+   +- Exchange hashpartitioning(run_id#0, order_id#1L, 8), ENSURE_REQUIREMENTS, [plan_id=56]
+      +- SortAggregate(key=[run_id#0, order_id#1L], functions=[partial_first(event_time#2, false), partial_first(city#14, false), partial_first(product_id#4L, false), partial_first(quantity#5L, false), partial_first(amount#6L, false), partial_first(sale_date#23, false)], output=[run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107])
+         +- *(1) Sort [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+            +- *(1) Project [run_id#0, order_id#1L, event_time#2, initcap(trim(city#3, None)) AS city#14, product_id#4L, quantity#5L, amount#6L, cast(gettimestamp(event_time#2, yyyy-MM-dd'T'HH:mm:ss, TimestampType, Some(Etc/UTC), false) as date) AS sale_date#23]
+               +- *(1) Filter ((((isnotnull(quantity#5L) AND NOT (initcap(trim(city#3, None)) = )) AND isnotnull(amount#6L)) AND (amount#6L >= 0)) AND (quantity#5L > 0))
+                  +- FileScan json [run_id#0,order_id#1L,event_time#2,city#3,product_id#4L,quantity#5L,amount#6L] Batched: false, DataFilters: [isnotnull(quantity#5L), NOT (initcap(trim(city#3, None)) = ), isnotnull(amount#6L), (amount#6L >..., Format: JSON, Location: InMemoryFileIndex(8 paths)[s3a://raw/events/run_id=lab1/partition=0/offset-000000016222-000000020..., PartitionFilters: [], PushedFilters: [IsNotNull(quantity), IsNotNull(amount), GreaterThanOrEqual(amount,0), GreaterThan(quantity,0)], ReadSchema: struct<run_id:string,order_id:bigint,event_time:string,city:string,product_id:bigint,quantity:big...
+,None)
+
+(3) Scan json 
+Output [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+Batched: false
+Location: InMemoryFileIndex [s3a://raw/events/run_id=lab1/partition=0/offset-000000016222-000000020881.jsonl, ... 7 entries]
+PushedFilters: [IsNotNull(quantity), IsNotNull(amount), GreaterThanOrEqual(amount,0), GreaterThan(quantity,0)]
+ReadSchema: struct<run_id:string,order_id:bigint,event_time:string,city:string,product_id:bigint,quantity:bigint,amount:bigint>
+
+(4) Filter [codegen id : 1]
+Input [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+Condition : ((((isnotnull(quantity#5L) AND NOT (initcap(trim(city#3, None)) = )) AND isnotnull(amount#6L)) AND (amount#6L >= 0)) AND (quantity#5L > 0))
+
+(5) Project [codegen id : 1]
+Output [8]: [run_id#0, order_id#1L, event_time#2, initcap(trim(city#3, None)) AS city#14, product_id#4L, quantity#5L, amount#6L, cast(gettimestamp(event_time#2, yyyy-MM-dd'T'HH:mm:ss, TimestampType, Some(Etc/UTC), false) as date) AS sale_date#23]
+Input [7]: [run_id#0, order_id#1L, event_time#2, city#3, product_id#4L, quantity#5L, amount#6L]
+
+(6) Sort [codegen id : 1]
+Input [8]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+Arguments: [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+
+(7) SortAggregate
+Input [8]: [run_id#0, order_id#1L, event_time#2, city#14, product_id#4L, quantity#5L, amount#6L, sale_date#23]
+Keys [2]: [run_id#0, order_id#1L]
+Functions [6]: [partial_first(event_time#2, false), partial_first(city#14, false), partial_first(product_id#4L, false), partial_first(quantity#5L, false), partial_first(amount#6L, false), partial_first(sale_date#23, false)]
+Aggregate Attributes [12]: [first#84, valueSet#85, first#86, valueSet#87, first#88L, valueSet#89, first#90L, valueSet#91, first#92L, valueSet#93, first#94, valueSet#95]
+Results [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+
+(8) Exchange
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Arguments: hashpartitioning(run_id#0, order_id#1L, 8), ENSURE_REQUIREMENTS, [plan_id=56]
+
+(9) Sort [codegen id : 2]
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Arguments: [run_id#0 ASC NULLS FIRST, order_id#1L ASC NULLS FIRST], false, 0
+
+(10) SortAggregate
+Input [14]: [run_id#0, order_id#1L, first#96, valueSet#97, first#98, valueSet#99, first#100L, valueSet#101, first#102L, valueSet#103, first#104L, valueSet#105, first#106, valueSet#107]
+Keys [2]: [run_id#0, order_id#1L]
+Functions [6]: [first(event_time#2, false), first(city#14, false), first(product_id#4L, false), first(quantity#5L, false), first(amount#6L, false), first(sale_date#23, false)]
+Aggregate Attributes [6]: [first(event_time#2)()#72, first(city#14)()#74, first(product_id#4L)()#76L, first(quantity#5L)()#78L, first(amount#6L)()#80L, first(sale_date#23)()#82]
+Results [8]: [run_id#0, order_id#1L, first(event_time#2)()#72 AS event_time#73, first(city#14)()#74 AS city#75, first(product_id#4L)()#76L AS product_id#77L, first(quantity#5L)()#78L AS quantity#79L, first(amount#6L)()#80L AS amount#81L, first(sale_date#23)()#82 AS sale_date#83]
+
+(11) Filter [codegen id : 2]
+Input [2]: [product_id#4L, amount#6L]
+Condition : isnotnull(product_id#4L)
+
+(12) Range [codegen id : 1]
+Output [1]: [id#2332L]
+Arguments: Range (1, 201, step=1, splits=Some(4))
+
+(13) Project [codegen id : 1]
+Output [2]: [id#2332L AS product_id#2334L, elt(cast((pmod(id#2332L, 4) + 1) as int), Elektronik, Fashion, Makanan, Rumah Tangga, false) AS category#2336]
+Input [1]: [id#2332L]
+
+(14) BroadcastExchange
+Input [2]: [product_id#2334L, category#2336]
+Arguments: HashedRelationBroadcastMode(List(input[0, bigint, false]),false), [plan_id=395]
+
+(15) BroadcastHashJoin [codegen id : 2]
+Left keys [1]: [product_id#4L]
+Right keys [1]: [product_id#2334L]
+Join type: Inner
+Join condition: None
+
+(16) Project [codegen id : 2]
+Output [2]: [amount#6L, category#2336]
+Input [4]: [product_id#4L, amount#6L, product_id#2334L, category#2336]
+
+(17) HashAggregate [codegen id : 2]
+Input [2]: [amount#6L, category#2336]
+Keys [1]: [category#2336]
+Functions [2]: [partial_count(1), partial_sum(amount#6L)]
+Aggregate Attributes [2]: [count#2674L, sum#2675L]
+Results [3]: [category#2336, count#2676L, sum#2677L]
+
+(18) Exchange
+Input [3]: [category#2336, count#2676L, sum#2677L]
+Arguments: hashpartitioning(category#2336, 8), ENSURE_REQUIREMENTS, [plan_id=401]
+
+(19) HashAggregate [codegen id : 3]
+Input [3]: [category#2336, count#2676L, sum#2677L]
+Keys [1]: [category#2336]
+Functions [2]: [count(1), sum(amount#6L)]
+Aggregate Attributes [2]: [count(1)#2382L, sum(amount#6L)#2384L]
+Results [3]: [category#2336, count(1)#2382L AS orders#2383L, sum(amount#6L)#2384L AS gross_sales#2385L]
+
+
+PLAN_D memuat SortMergeJoin: True
+PLAN_E memuat BroadcastHashJoin: True
+BENCH D_sort_merge_join ulangan=1 0.215 detik
+BENCH E_broadcast_join ulangan=1 0.097 detik
+BENCH D_sort_merge_join ulangan=2 0.025 detik
+BENCH E_broadcast_join ulangan=2 0.034 detik
+BENCH D_sort_merge_join ulangan=3 0.021 detik
+BENCH E_broadcast_join ulangan=3 0.023 detik
+HASIL_JOIN {'Makanan': (5094, 1301918), 'Elektronik': (5097, 1306590), 'Rumah Tangga': (4901, 1247281), 'Fashion': (4868, 1251527)}
+VALIDASI_JOIN_OK
+
+[PAUSE] [PAUSE 4] Percobaan D/E selesai. Buka SQL -> bandingkan SortMergeJoin vs BroadcastHashJoin.
+        Buka http://localhost:4040, amati Jobs/SQL/Stages/Executors, ambil screenshot.
+        (stdin bukan terminal interaktif -> pause dilewati)
+
+=== ICEBERG: tulis tabel curated ===
++-------------------+-----------------------+---------+
+|snapshot_id        |committed_at           |operation|
++-------------------+-----------------------+---------+
+|1336292529397468429|2026-11-06 00:10:35.451|append   |
+|7162936883153728256|2026-11-06 00:27:11.418|append   |
+|1933709803336548298|2026-11-06 00:33:25.561|append   |
++-------------------+-----------------------+---------+
+
+== Physical Plan ==
+* ColumnarToRow (2)
++- BatchScan lake.curated.orders_clean (1)
+
+
+(1) BatchScan lake.curated.orders_clean
+Output [8]: [run_id#3393, order_id#3394L, event_time#3395, city#3396, product_id#3397L, quantity#3398L, amount#3399L, sale_date#3400]
+lake.curated.orders_clean (branch=null) [filters=sale_date IS NOT NULL, sale_date = 20701, groupedBy=]
+
+(2) ColumnarToRow [codegen id : 1]
+Input [8]: [run_id#3393, order_id#3394L, event_time#3395, city#3396, product_id#3397L, quantity#3398L, amount#3399L, sale_date#3400]
+
+
+ICEBERG_OK
+ICEBERG_ROWS=19960 SUMMARY_ROWS=84 SNAPSHOTS=3
+PRUNING: filter sale_date=2026-09-05 -> 2775 baris; 1 dari 7 file data relevan; predicate di plan: True
+
+=== RINGKASAN (median detik) ===
+  A_groupby_baseline       0.0474
+  B_skew_before            0.0381
+  C_skew_after_salting     0.0254
+  D_sort_merge_join        0.0253
+  E_broadcast_join         0.0345
+  salting  B->C : {'baseline_s': 0.0381, 'optimasi_s': 0.0254, 'perubahan_persen': 33.33, 'speedup': 1.5}
+  join     D->E : {'baseline_s': 0.0253, 'optimasi_s': 0.0345, 'perubahan_persen': -36.36, 'speedup': 0.733}
+Artefak tersimpan di hasil/lab1/
+
+[PAUSE] [PAUSE 5] Iceberg selesai. Ambil screenshot terakhir (Jobs/SQL/Stages) SEBELUM spark.stop().
+        Buka http://localhost:4040, amati Jobs/SQL/Stages/Executors, ambil screenshot.
+        (stdin bukan terminal interaktif -> pause dilewati)

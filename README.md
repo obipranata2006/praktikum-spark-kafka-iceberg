@@ -24,3 +24,9 @@ docker compose exec tools python scripts/05_audit_hasil.py --run-id smoke-a
 | Iceberg REST Catalog | http://localhost:8181 |
 
 Kredensial adalah dummy untuk lab lokal. Satu eksperimen = satu `--run-id` yang konsisten di producer, consumer, dan Spark.
+
+## Catatan implementasi
+- Paket skrip/konfigurasi ini dibuat ulang (bukan paket asli dosen); nama file, topik, bucket, dan log `*_OK` mengikuti modul.
+- Image MinIO resmi sudah dicabut dari Docker Hub, sehingga object storage S3-compatible memakai **Silo** (fork MinIO): `docker.io/pgsty/silo:latest`.
+- Eksperimen: `smoke-a` dan `lab1` (20.000 baris, smoke test) serta `kelas-1m` (1.000.000 baris). Artefak ada di `hasil/<run-id>/`, screenshot di `screenshots/`, template laporan di `laporan/`.
+- `spark.log` adalah log eksekusi Spark dari run `lab1`.
