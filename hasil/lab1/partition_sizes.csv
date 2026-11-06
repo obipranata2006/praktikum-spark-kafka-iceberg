@@ -1,0 +1,17 @@
+scenario,partition_id,rows
+skew_before,0,0
+skew_before,1,0
+skew_before,2,2023
+skew_before,3,15937
+skew_before,4,0
+skew_before,5,0
+skew_before,6,2000
+skew_before,7,0
+salted_after,0,2491
+salted_after,1,1875
+salted_after,2,5574
+salted_after,3,4475
+salted_after,4,254
+salted_after,5,1229
+salted_after,6,1428
+salted_after,7,2634

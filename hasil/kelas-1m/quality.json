@@ -1,0 +1,75 @@
+{
+  "run_id": "kelas-1m",
+  "spark_version": "3.5.3",
+  "config": {
+    "master": "local[4]",
+    "shuffle_partitions": 8,
+    "salt_buckets": 16,
+    "repeats": 3,
+    "aqe_enabled": "false",
+    "auto_broadcast_threshold": "-1"
+  },
+  "validations": {
+    "salting_ok": true,
+    "join_ok": true,
+    "iceberg_ok": true
+  },
+  "raw_count": 1000000,
+  "clean_count": 998005,
+  "rejected_count": 1995,
+  "rule_breakdown": {
+    "city_kosong_atau_null": 995,
+    "amount_null": 1000,
+    "amount_negatif": 0,
+    "quantity_tidak_valid": 0
+  },
+  "rules": [
+    "city = initcap(trim(city)); buang city kosong/null",
+    "buang amount null atau < 0",
+    "buang quantity <= 0",
+    "dropDuplicates(run_id, order_id)  # idempoten terhadap at-least-once"
+  ],
+  "skew": {
+    "before": {
+      "ratio_max_vs_mean": 6.398,
+      "max_rows": 798166,
+      "empty_partitions": 5
+    },
+    "after": {
+      "ratio_max_vs_mean": 2.253,
+      "max_rows": 281097,
+      "empty_partitions": 0
+    }
+  },
+  "iceberg": {
+    "orders_clean_rows": 998005,
+    "sales_summary_rows": 84,
+    "snapshots": 5,
+    "pruning_date": "2026-09-05",
+    "rows_on_pruning_date": 142451,
+    "data_files_total": 7,
+    "data_files_matching_date": 1,
+    "plan_contains_sale_date_filter": true
+  },
+  "median_seconds": {
+    "A_groupby_baseline": 0.0252,
+    "B_skew_before": 0.0552,
+    "C_skew_after_salting": 0.0278,
+    "D_sort_merge_join": 0.0243,
+    "E_broadcast_join": 0.0243
+  },
+  "comparison": {
+    "salting_B_vs_C": {
+      "baseline_s": 0.0552,
+      "optimasi_s": 0.0278,
+      "perubahan_persen": 49.64,
+      "speedup": 1.986
+    },
+    "join_D_vs_E": {
+      "baseline_s": 0.0243,
+      "optimasi_s": 0.0243,
+      "perubahan_persen": 0.0,
+      "speedup": 1.0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+# Partition pruning sale_date = 2026-09-05
+# run_id=kelas-1m
+
+== Physical Plan ==
+* ColumnarToRow (2)
++- BatchScan lake.curated.orders_clean (1)
+
+
+(1) BatchScan lake.curated.orders_clean
+Output [8]: [run_id#3393, order_id#3394L, event_time#3395, city#3396, product_id#3397L, quantity#3398L, amount#3399L, sale_date#3400]
+lake.curated.orders_clean (branch=null) [filters=sale_date IS NOT NULL, sale_date = 20701, groupedBy=]
+
+(2) ColumnarToRow [codegen id : 1]
+Input [8]: [run_id#3393, order_id#3394L, event_time#3395, city#3396, product_id#3397L, quantity#3398L, amount#3399L, sale_date#3400]
+
+

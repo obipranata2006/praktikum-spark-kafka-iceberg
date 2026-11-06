@@ -1,0 +1,17 @@
+experiment,repeat,seconds,description
+A_groupby_baseline,1,0.2957,groupBy(city) tanpa perlakuan
+A_groupby_baseline,2,0.0252,groupBy(city) tanpa perlakuan
+A_groupby_baseline,3,0.0248,groupBy(city) tanpa perlakuan
+B_skew_before,1,0.1186,groupBy(city) pada repartition(city) -> skew
+B_skew_before,2,0.0552,groupBy(city) pada repartition(city) -> skew
+B_skew_before,3,0.0525,groupBy(city) pada repartition(city) -> skew
+C_skew_after_salting,1,0.287,salting + agregasi dua tahap
+C_skew_after_salting,2,0.0169,salting + agregasi dua tahap
+C_skew_after_salting,3,0.0278,salting + agregasi dua tahap
+D_sort_merge_join,1,0.427,join dim produk (hint merge) + groupBy(category)
+E_broadcast_join,1,0.2421,join dim produk (broadcast) + groupBy(category)
+D_sort_merge_join,2,0.0243,join dim produk (hint merge) + groupBy(category)
+E_broadcast_join,2,0.0223,join dim produk (broadcast) + groupBy(category)
+D_sort_merge_join,3,0.0192,join dim produk (hint merge) + groupBy(category)
+E_broadcast_join,3,0.0243,join dim produk (broadcast) + groupBy(category)
+F_iceberg_write,1,2.5597,tulis orders_clean + sales_summary (tidak dibandingkan)
