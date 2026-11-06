@@ -4,7 +4,7 @@ Repository ini berisi implementasi dan hasil **Milestone 2a** praktikum Analitik
 
 > **Alur data:** Producer → Redpanda (Kafka) → Consumer → Silo/MinIO (`raw`) → Spark (cleaning + analisis) → Apache Iceberg (`warehouse`)
 
-**Disusun oleh:** *(isi nama dan NIM)* · **GitHub:** [obipranata2006](https://github.com/obipranata2006)
+**Disusun oleh:** *(I Made Obi Pranata (42430003))* · **GitHub:** [obipranata2006](https://github.com/obipranata2006)
 
 ---
 
