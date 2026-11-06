@@ -1,0 +1,6 @@
+# Spark 3.5.3 + Java 17 + Python 3
+FROM apache/spark:3.5.3-scala2.12-java17-python3-ubuntu
+USER root
+RUN mkdir -p /root/.ivy2 /app
+ENV PYSPARK_PYTHON=python3
+WORKDIR /app
